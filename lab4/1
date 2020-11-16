@@ -1,0 +1,17 @@
+#include <stdio.h> 
+#include <math.h> 
+#include <stdlib.h> 
+int main()
+{
+    system("chcp 1251");
+    system("cls");
+    int a,b,p,s;
+    printf("Введите длину : ");
+        scanf_s("%d",&a);
+        printf("Введите ширину: ");
+        scanf_s("%d",&b);
+  p=(a+b)*2;
+    s = a * b;
+    printf("Площадь: %d, периметр : %d \n",s,p);
+    return 0;
+}
