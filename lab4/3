@@ -1,0 +1,18 @@
+#include <stdio.h> 
+#include <math.h> 
+#include <stdlib.h> 
+int main()
+{
+    system("chcp 1251");
+    system("cls");
+    int a,b;
+    float l;
+    printf(" Введите a: ");
+    scanf_s("%d",&a);
+    printf(" Введите b: ");
+    scanf_s("%d",&b);
+    l = a + b;
+    l = l / 2;
+    printf("Среднее арифметическое : %.2f\n", l);
+    return 0;
+}
