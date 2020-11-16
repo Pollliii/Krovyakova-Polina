@@ -1,0 +1,16 @@
+#include <stdio.h> 
+#include <math.h> 
+#include <stdlib.h> 
+int main()
+{
+    system("chcp 1251");
+    system("cls");
+    float pi = 3.14;
+    int d;
+    float l;
+    printf(" Введите диаметр: ");
+    scanf_s("%d", &d);
+    l = pi * d;
+    printf("Длина : %.2f \n", l);
+    return 0;
+}
