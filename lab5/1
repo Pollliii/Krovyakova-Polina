@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <math.h>
+#include <locale.h>
+
+int main() {
+	int x1, x2, y1, y2;
+	double r;
+	scanf_s("%d", &x1);
+	scanf_s("%d", &y1);
+	scanf_s("%d", &x2);
+	scanf_s("%d", &y2);
+	r = sqrt((pow(abs(x2 - x1),2) + (pow(abs(y2 - y1),2)))) ;
+	printf("result %.2f", r);
+	return 0;
+}
