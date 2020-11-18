@@ -1,0 +1,20 @@
+#include <stdio.h> 
+#include <math.h> 
+#include <locale.h>
+
+int main()
+{
+	float x, a, b;//ввод переменных
+	printf("Enter A: ");//ввод с клавиатуры значения
+	scanf_s("%f", &a);
+	printf("Enter B: ");//ввод с клавиатуры значения
+	scanf_s("%f", &b);
+	if (a != 0) //ввод условия
+	{
+		x = -b / a; //вычисление
+		printf("x= %.2f\n", x); //вывод на экран значения
+	}
+	else
+		printf("impossible\n"); //неудовлетворенность условию
+	return 0;
+}
