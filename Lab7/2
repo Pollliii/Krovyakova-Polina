@@ -1,0 +1,16 @@
+#include <stdio.h> 
+#include <math.h> 
+#include <locale.h>
+
+int main()
+{
+    
+   float pi = 3.14;
+        
+    float b,a;
+    printf("Enter angle : ");//просим ввести угол а 
+    scanf_s("%f", &a);
+    b = (float)a /  pi *180;
+        printf("in radians: %.2f", b);
+    return 0;
+}
