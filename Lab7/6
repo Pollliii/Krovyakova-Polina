@@ -1,0 +1,23 @@
+#include <stdio.h> 
+#include <math.h> 
+#include <locale.h>
+int main() {
+	float a1, b1, c1, a2, b2, c2, a, x, y; //ввод переменных
+	printf("enter A1 = ");//ввод 
+	scanf_s("%f", &a1);
+	printf("enter B1 = ");//ввод 
+	scanf_s("%f", &b1);
+	printf("enter C1 = ");//ввод 
+	scanf_s("%f", &c1);
+	printf("enter A2 = ");//ввод 
+	scanf_s("%f", &a2);
+	printf("enter B2 = ");//ввод 
+	scanf_s("%f", &b2);
+	printf("enter C2 = ");//ввод 
+	scanf_s("%f", &c2);
+	a = a1 * b2 - a2 * b1; //ищем определитель системы
+	x = (c1 * b2 - c2 * b1) / a;
+	y = (a1 * c2 - a2 * c1) / a;
+	printf("x= %.2f\n", x); //вывод  
+	printf("y= %.2f\n", y); //вывод 
+	return 0; }
