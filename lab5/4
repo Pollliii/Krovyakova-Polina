@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <math.h>
+#include <locale.h>
+
+int main() {
+	int x1, x2, y1, y2,a,b,s,p;
+
+	scanf_s("%d", &x1);//вводим точку а
+	scanf_s("%d", &y1);
+	scanf_s("%d", &x2);//вводим точку В прямоугольника
+	scanf_s("%d", &y2);
+	a = abs(x1 - x2);//находим одну сторону
+	b = abs(y1 - y2);//находим вторую сторону
+	s = a * b;//находим площадь
+	p = (a + b) * 2;//находим периметр
+	printf("square %d, perimeter %d", s,p);
+	return 0;
+}
