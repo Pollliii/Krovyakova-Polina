@@ -1,0 +1,19 @@
+#include <stdio.h> 
+#include <math.h> 
+#include <locale.h>
+
+int main()
+{
+	float x, y,a, z, c;
+	printf("enter the amount of candies in kg: ");//ввод  значения
+	scanf_s("%f", &x);
+	printf("Enter the cost: ");//ввод значения
+	scanf_s("%f", &a);
+	z = (float)a / x; //вычисление стоимости 1 кг
+	printf("1 kg will cost: %.2f\n", z); //вывод  значения
+	printf("Enter the new amount of candies: ");//ввод с клавиатуры значения
+	scanf_s("%f", &y);
+	c = y * z; //вычисление стоимость y кг
+	printf("result: %.2f\n", c);
+	return 0;
+}
