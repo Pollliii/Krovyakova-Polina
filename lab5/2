@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <math.h>
+#include <locale.h>
+
+int main() {
+	int x1, x2, y1, y2,x3,r;
+	scanf_s("%d", &x1);//вводим точку А
+	scanf_s("%d",&x2);//вводим В
+	scanf_s("%d", &x3);//вводим С 
+	y1 = abs(x1 - x3);//длина ас
+	y2 = abs(x2 - x3);//длина Вс
+	r = y1 + y2;
+	printf("Length AC : %d length BC: %d result %d",y1,y2,r);
+	return 0;
+}
