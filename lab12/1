@@ -1,0 +1,113 @@
+//Дан номер дня – целое число от 1 до 31 и месяца — целое число в диапазоне 1–12 (1 — январь, 2 — февраль и т. д.).
+//Вывести дату в виде текста (например, «пятое января»).
+#include <math.h> // подключаемем библиотеку для использования математических операций
+#include <stdio.h> // подключаем библиотеку ввод/вывода на экран
+#include <stdlib.h>
+int main() //определяем функцию
+{
+	system("chcp 1251");
+	int  a,b,i;// вводим переменные без значени 
+	printf("Enter ");//просим пользователя ввести номер дня
+	scanf_s("%d", &a);//ввод
+	printf("Enter  ");//просим пользователя ввести  месяц
+	scanf_s("%d", &b);//ввод
+	switch (a)
+	{
+	case 30:
+		printf("тридцатое ");
+		break;
+	case 31:
+		printf("тридцать первое ");
+		break;
+	case 20:
+		printf("двадцатое ");
+		break;
+	case 19:
+		printf("девятнадцатое ");
+		break;
+	case 18:
+		printf("восемнадцатое ");
+		break;
+	case 17:
+		printf("семнадцатое ");
+		break;
+	case 16:
+		printf("шестнадцатое ");
+		break;
+	case 15:
+		printf("пятнадцатое ");
+	case 14:
+		printf("четырнадцатое ");
+		break;
+	case 13:
+		printf("тринадцатое ");
+		break;
+	case 12:
+		printf("двенадцатое ");
+		break;
+	case 11:
+		printf("одиннадцатое ");
+		break;
+	case 10:
+		printf("деятое");
+		break;
+	}
+	if ((a / 10 == 2)&&(a %100 != 20))
+		printf("двадцать");
+	if ((a / 10 != 1)&&(a / 10 != 3)) {
+		switch (a % 10)
+		{
+
+		case 1:
+			printf("первое ");
+		break; case 2:
+			printf("второе ");
+		break; case 3:
+			printf("третье ");
+		break; case 4:
+			printf("четвёртое ");
+		break; case 5:
+			printf("пятое ");
+		break; case 6:
+			printf("шестое ");
+		break; case 7:
+			printf("седьмое ");
+		break; case 8:
+			printf("восьмое ");
+			break;
+		case 9:
+			printf("девятое ");
+			break;
+		}
+	}
+	switch (b)
+	{
+	case 1:
+		printf("января");
+		break; case 2:
+			printf("февраля");
+			break; case 3:
+				printf("марта");
+				break; case 4:
+					printf("апреля");
+					break; case 5:
+						printf("мая");
+						break; case 6:
+							printf("июня");
+							break; case 7:
+								printf("июля");
+								break; case 8:
+									printf("августа");
+									break; case 9:
+										printf("сентября");
+										break; case 10:
+											printf("октября");
+											break; case 11:
+												printf("ноября");
+												break; case 12:
+													printf("декабря");
+													break;
+	
+	}
+	return 0;
+}
