@@ -1,0 +1,19 @@
+#include <stdio.h>
+    int main()
+    {
+        system("chcp 1251");
+        int n;
+        float s,k;
+        printf("Введите количество повторений  ");
+        scanf_s("%d", &n);
+        k = 1.1;
+        s = 1.1;
+        for (int i = 0; i < n + 1; i++) {
+            k =(k + 0.1);
+            s = s * k;
+        }
+        printf("Произведение %f", s);
+ 
+        return 0;
+}
+© 2020 GitHub, Inc.
