@@ -1,0 +1,115 @@
+//Дано целое число в диапазоне 100–999. 
+//Вывести строку-описание данного числа, например: 256 — «двести пятьдесят шесть», 814 — «восемьсот четырнадцать».
+#include <math.h> // подключаемем библиотеку для использования математических операций
+#include <stdio.h> // подключаем библиотеку ввод/вывода на экран
+#include <stdlib.h>
+#include <string.h>
+int main() //определяем функцию
+{
+	system("chcp 1251");
+	int  a;// вводим переменные без значени 
+	printf("Enter ");//просим пользователя ввести номер дня
+	scanf_s("%d", &a);//ввод
+	switch (a / 100)
+	{
+	case 1:
+		printf("сто ");
+		break;
+	case 2:
+		printf("двести ");
+	break; case 3:
+		printf("триста ");
+	break; case 4:
+		printf("четыресто ");
+	break; case 5:
+		printf("пятьсот ");
+	break; case 6:
+		printf("шестьсот ");
+	break; case 7:
+		printf("семьсот ");
+	break; case 8:
+		printf("восемьсот ");
+	break; case 9:
+		printf("девятьсот ");
+		break;
+	}
+	switch (a%100)
+	{
+	case 19:
+		printf("девятнадцать ");
+		break;
+	case 18:
+		printf("восемнадцать ");
+		break;
+	case 17:
+		printf("семнадцать ");
+		break;
+	case 16:
+		printf("шестнадцать ");
+		break;
+	case 15:
+		printf("пятнадцать ");
+	case 14:
+		printf("четырнадцать");
+		break;
+	case 13:
+		printf("тринадцать ");
+		break;
+	case 12:
+		printf("двенадцать ");
+		break;
+	case 11:
+		printf("одиннадцать ");
+		break;
+	case 10:
+		printf("десять");
+		break;
+	}
+	
+	a = a % 100;
+	if (a / 10 == 2)  
+		printf("двадцать "); 
+	if (a / 10 == 3)
+		printf("тридцать "); 
+	if (a / 10 == 4)
+		printf("сорок ");
+	if (a / 10 == 5)
+		printf("пятьдесят ");
+	if (a / 10 == 6)
+		printf("шестьдесят ");
+	if (a / 10 == 7)
+		printf("семьдесят ");
+	if (a / 10 == 8)
+		printf("восемьдесят ");
+	if (a / 10 == 9)
+		printf("девяносто ");
+
+	if ((a / 10 != 1)) {
+		switch (a % 10)
+		{
+
+		case 1:
+			printf("один ");
+		break; case 2:
+			printf("два ");
+		break; case 3:
+			printf("три ");
+		break; case 4:
+			printf("четыре ");
+		break; case 5:
+			printf("пять ");
+		break; case 6:
+			printf("шесть");
+		break; case 7:
+			printf("семь ");
+		break; case 8:
+			printf("восемь ");
+			break;
+		case 9:
+			printf("девять");
+			break;
+		}
+	}
+
+	return 0;
+}
