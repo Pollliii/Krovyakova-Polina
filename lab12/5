@@ -1,0 +1,82 @@
+//. В восточном календаре принят 60-летний цикл, состоящий из 12- летних подциклов, 
+//обозначаемых названиями цвета: зеленый, красный, желтый, белый и черный. 
+//В каждом подцикле годы носят названия животных: крысы, коровы, тигра, зайца, дракона, змеи, лошади, овцы, обезьяны, курицы, собаки и свиньи. 
+//По номеру года определить его название, если 1984 год — начало цикла: «год зеленой крысы».
+
+#include <stdio.h>
+
+    int main(void)
+    {
+        system("chcp 1251");
+        int n;
+        printf("Год  ");
+        scanf_s("%d", &n);
+
+        printf("год ");
+
+        switch ((n) % 10) {
+        case 0:
+        case 1:
+            printf("бел");
+            break;
+        case 2:
+        case 3:
+            printf("черн");
+            break;
+        case 4:
+        case 5:
+            printf("зелён");
+            break;
+        case 6:
+        case 7:
+            printf("красн");
+            break;
+        case 8:
+        case 9:
+            printf("жёлт");
+            break;
+        }
+
+        
+
+        switch ((n + 8) % 12) {
+        case 0:
+            printf("ой крысы\n");
+            break;
+        case 1:
+            printf("ой коровы\n");
+            break;
+        case 2:
+            printf("ого тигра\n");
+            break;
+        case 3:
+            printf("ого зайца\n");
+            break;
+        case 4:
+            printf("ого дракона\n");
+            break;
+        case 5:
+            printf("ой змеи\n");
+            break;
+        case 6:
+            printf("ой лошади\n");
+            break;
+        case 7:
+            printf("ой овцы\n");
+            break;
+        case 8:
+            printf("обезьяны\n");
+            break;
+        case 9:
+            printf("курицы\n");
+            break;
+        case 10:
+            printf("собаки\n");
+            break;
+        case 11:
+            printf("свиньи\n");
+            break;
+        }
+
+        return 0;
+}
