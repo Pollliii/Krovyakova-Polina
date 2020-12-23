@@ -1,0 +1,25 @@
+//Даны целые положительные числа A и B. Найти их наибольший общий делитель (НОД), используя алгоритм Евклида
+#include <stdio.h>
+    int main()
+    {
+        system("chcp 1251");
+        int a,b;
+        
+        printf("Введите a ");
+        scanf_s("%d", &a);
+        printf("Введите b ");
+        scanf_s("%d", &b);
+        a = abs(a);
+        b = abs(b);
+       
+            while (a != b)
+                if (a>b)
+                a -= b;
+       else
+                b -= a;
+           
+       
+       printf("Нод %d", a );
+ 
+        return 0;
+}
