@@ -1,0 +1,30 @@
+//Описать функцию Sign(X) целого типа, возвращающую для вещественного числа X  значения:
+//−1, если X < 0; 0, если X = 0; 1, если X > 0.
+//С помощью этой функции найти значение выражения Sign(A) + Sign(B) для данных вещественных чисел A и B.
+
+#include <stdio.h>
+#include <locale.h>
+#include <math.h>
+float sign(float x) {
+    if (x < 0) {
+        return -1;
+    }
+    if (x == 0) {
+        return 0;
+    }
+    if (x > 0) {
+        return 1;
+    }
+}
+    int main()
+    {
+        system("chcp 1251");
+        float a,b,k;
+            printf("Введите число  ");
+            scanf_s("%f", &a);
+            printf("Введите число  ");
+            scanf_s("%f", &b);
+            k = sign(a) + sign(b);
+            printf(" Сумма фуннций %f ",k);
+        return 0;
+}
