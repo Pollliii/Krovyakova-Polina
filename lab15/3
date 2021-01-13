@@ -1,0 +1,26 @@
+// Описать функцию RingS(R1, R2) вещественного типа, находящую площадь кольца,
+//заключенного между двумя окружностями с общим центром и радиусами R1 и R2 (R1 и R2 — вещественные, R1 > R2). 
+//С ее помощью найти площади трех колец, для которых даны внешние и внутренние радиусы.
+
+#include <stdio.h>
+#include <locale.h>
+#include <math.h>
+
+float ringS(float r1,float r2) { float pi = 3.14;
+    int k = pi * r1 * r1 - pi * r2 * r2;
+        return k;
+}
+    int main()
+    {
+        system("chcp 1251");
+        float r1,r2;
+        for (int i = 0; i < 4; i++) {
+            printf("Введите радиус 1  ");
+            scanf_s("%f", &r1);
+            printf("Введите радиус 2  ");
+            scanf_s("%f", &r2);
+            printf(" Сумма фуннций %f ", ringS(r1, r2));
+            printf("\n");
+        }
+        return 0;
+}
