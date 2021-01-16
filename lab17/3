@@ -1,0 +1,23 @@
+//Дан массив A размера N. Найти минимальный элемент из его элементов с четными номерами: A2, A4, A6
+#include <stdio.h>
+#include <locale.h>
+#include <math.h>
+int main() {
+    system("chcp 1251");
+    int n,b,d;
+    int a[10000];
+    b = 0;
+    printf("Введите n ");
+    scanf_s("%d", &n);
+    for (int i = 0; i < n; i++) {
+        scanf_s("%d", &a[i]);
+    }
+        d = a[1];
+        for (int i = 1; i < n; i += 2) {
+            if (a[i] < d)
+                d = a[i];           
+        } 
+            printf("%d", d);
+ 
+    return 0;
+}
