@@ -1,0 +1,31 @@
+//Дан целочисленный массив размера N. 
+//Увеличить все нечетные числа, содержащиеся в массиве, на исходное значение последнего нечетного числа.
+//Если нечетные числа в массиве отсутствуют, то оставить массив без изменений
+#include <stdio.h>
+#include <locale.h>
+#include <math.h>
+int main() {
+    system("chcp 1251");
+    int n, d, k;
+    int a[10000];
+    printf("Введите n ");
+    scanf_s("%d", &n);
+    for (int i = 0; i < n; i++) {
+        a[i] = rand() % 100;
+        printf(" %d ", a[i]);
+    }
+    printf("\n");
+  
+    for (int i = 0; i < n; i++) {
+        if (a[i] % 2 != 0) k = a[i];
+    }
+  
+    for (int i = 0; i < n; i++) {
+        if (a[i] % 2 != 0)  a[i]+=k;
+        }
+
+    for (int i = 0; i < n; i++) {
+        printf(" %d ", a[i]);
+    }
+    return 0; 
+}
