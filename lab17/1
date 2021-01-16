@@ -1,0 +1,32 @@
+//Дан массив размера N и целые числа K и L (1 ≤ K ≤ L ≤ N).
+//Найти среднее арифметическое элементов массива с номерами от K до L включительно.
+#include <stdio.h>
+#include <locale.h>
+#include <math.h>
+int main()
+{
+    system("chcp 1251");
+    int n,k,l; int a[10000];
+    printf("Введите n ");
+    scanf_s("%d", &n);
+    printf("Введите k ");
+    scanf_s("%d", &k);
+    printf("Введите l ");
+    scanf_s("%d", &l);
+    int p = 0; 
+    int s = 0;
+    float g;
+        for (int i = 0; i < n; i++) {
+            a[i] = rand() % n;
+            printf("%d ", a[i]);
+        }
+
+        printf("\n ");
+        for (int i = k; i <= l; i++) {
+            s = s + a[i];
+            p++;
+    }
+        g = (float)s / (float)p;
+        printf("%.2f", g);
+    return 0;
+}
