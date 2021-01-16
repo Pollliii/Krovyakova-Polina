@@ -1,0 +1,33 @@
+//Дан массив A размера N.
+//Сформировать новый массив B того же размера по следующему правилу: 
+//элемент BK равен среднему арифметическому элементов массива A с номерами от 1 до K.
+#include <stdio.h>
+#include <locale.h>
+#include <math.h>
+int main() {
+    system("chcp 1251");
+    int n,d,d1;
+    float k;
+    int a[10000];
+    float b[10000];
+    int p = 0; int s = 0;
+    printf("Введите n ");
+    scanf_s("%d", &n);
+    for (int i = 0; i < n; i++) {
+        scanf_s("%d", &a[i]);
+    }
+    printf("\n");
+  
+    for (int i = 0; i < n; i++) {
+        s = s + a[i];
+        p++;
+        k = (float)s / (float)p;
+        b[i] = k;
+        }
+    
+  
+    for (int i = 0; i < n; i++) {
+        printf(" %.2f ", b[i]);
+    }
+    return 0; 
+}
